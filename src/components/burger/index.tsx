@@ -1,7 +1,7 @@
 import { motion, useCycle } from "framer-motion";
 import React, { useEffect } from "react";
 
-import { MotionType } from "@types/index";
+import { MotionType } from "@typings/index";
 
 import MenuToggle from "./menuToggle";
 import Navigation from "./navigation";

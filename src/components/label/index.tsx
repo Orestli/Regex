@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useRouter } from "next/router";
 import React from "react";
 
-import { MotionType } from "@types/index";
+import { MotionType } from "@typings/index";
 
 import Button from "../button";
 

@@ -7,7 +7,7 @@ const nextConfig = {
       ...config.resolve.alias,
       "@public": path.join(__dirname, "./public"),
       "@utils": path.join(__dirname, "./src/utils"),
-      "@types": path.join(__dirname, "./src/types"),
+      "@typings": path.join(__dirname, "./src/typings"),
     };
     config.module.rules.push({
       test: /\.svg$/,

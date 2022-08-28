@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import React from "react";
 
-import { MotionType } from "@types/index";
+import { MotionType } from "@typings/index";
 
 import styles from "./styles.module.scss";
 
