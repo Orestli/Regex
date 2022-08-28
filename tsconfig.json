@@ -18,7 +18,7 @@
     "paths": {
       "@public/*": ["public/*"],
       "@utils/*": ["src/utils/*"],
-      "@typings/*": ["src/typings/*"],
+      "@typings/*": ["src/typings/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -9,7 +9,6 @@ Here are the most commonly used regular expressions.
 
 The project is completely open for improvement.
 
-
 ## How can I contribute?
 
 If you would like to contribute, please create a **[Pull Request](https://github.com/Orestli/regex/pulls)** with the following template:
@@ -24,6 +23,7 @@ If you would like to contribute, please create a **[Pull Request](https://github
   "priority": 1
 }
 ```
+
 <table class="table table-bordered table-striped">
     <thead>
     <tr>
