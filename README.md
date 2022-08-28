@@ -2,8 +2,6 @@
 
 ### A place where popular regular expressions are collected.
 
----
-
 Often, users have to search for regular expressions all over the Internet.
 It's time to put an end to this and collect all the necessary tools in one place.
 
@@ -13,8 +11,6 @@ The project is completely open for improvement.
 
 
 ## How can I contribute?
-
----
 
 If you would like to contribute, please create a **[Pull Request](https://github.com/Orestli/regex/pulls)** with the following template:
 
@@ -73,12 +69,8 @@ If you would like to contribute, please create a **[Pull Request](https://github
 
 ## I found a bug, what should I do?
 
----
-
 Create an [issue](https://github.com/Orestli/regex/issues) and describe it in detail.
 
 ## Licence
-
----
 
 MIT License
