@@ -75,7 +75,7 @@
     "title": "Hashtags",
     "pattern": "/\\B#([a-z0-9]{2,})(?![~!@#$%^&*()=+_`\\-\\|/'\\[\\]\\{\\}]|[?.,]*\\w)/ig",
     "placeholder": "#wtf",
-    "description":"Matches hashtags",
+    "description": "Matches hashtags",
     "tags": "hashtags,strings,other,strings",
     "priority": 2
   },

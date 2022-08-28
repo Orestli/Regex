@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Regex.ua
 
-## Getting Started
+### A place where popular regular expressions are collected.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
+Often, users have to search for regular expressions all over the Internet.
+It's time to put an end to this and collect all the necessary tools in one place.
+
+Here are the most commonly used regular expressions.
+
+The project is completely open for improvement.
+
+
+## How can I contribute?
+
+---
+
+If you would like to contribute, please create a **[Pull Request](https://github.com/Orestli/regex/pulls)** with the following template:
+
+```json
+{
+  "title": "Title",
+  "description": "Description",
+  "pattern": "Regular expression",
+  "placeholder": "Placeholder",
+  "tags": "string,number,date,email",
+  "priority": 1
+}
 ```
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 50px;">Type</th>
+        <th style="width: 50px;">Required</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Title</td>
+      <td>String</td>
+      <td>Yes</td>
+      <td>The name of your regular expression</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>String</td>
+      <td>Yes</td>
+      <td>Description of your regular expression</td>
+    </tr>
+    <tr>
+      <td>Pattern</td>
+      <td>String</td>
+      <td>Yes</td>
+      <td>Regular expression</td>
+    </tr>
+    <tr>
+      <td>Placeholder</td>
+      <td>String</td>
+      <td>Yes</td>
+      <td>The text that will be displayed in the placeholder</td>
+    </tr>
+    <tr>
+      <td>Tags</td>
+      <td>String</td>
+      <td>Optional</td>
+      <td>Tags of your regular expression (separate with commas). Used for search</td>
+    </tr>
+    </tbody>
+</table>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## I found a bug, what should I do?
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Create an [issue](https://github.com/Orestli/regex/issues) and describe it in detail.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Licence
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT License
