@@ -13,8 +13,10 @@ const Footer: React.FC = () => {
         <span className={styles.footerText}>© {format(new Date(), "yyyy")} Regex.ua</span>
         <nav className={styles.footerNav}>
           {footerNavList.map(({ text, link }) => (
-            <Link href={link} key={text}>
-              <a className={styles.footerNavItem}>{text}</a>
+            <Link key={text} href={link}>
+              <a target="_blank" rel="noopener noreferrer" className={styles.footerNavItem}>
+                {text}
+              </a>
             </Link>
           ))}
         </nav>

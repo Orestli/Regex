@@ -17,8 +17,8 @@ export const headerNavList: HeaderNavProps[] = [
 ];
 
 export const footerNavList: FooterNavProps[] = [
-  { text: "Questions", link: "#" },
-  { text: "Contribute", link: "#" },
-  { text: "GitHub", link: "#" },
-  { text: "Author", link: "#" },
+  { text: "Questions", link: "https://github.com/Orestli/regex/issues" },
+  { text: "Contribute", link: "https://github.com/Orestli/regex/pulls" },
+  { text: "GitHub", link: "https://github.com/Orestli/regex" },
+  { text: "Author", link: "https://github.com/Orestli" },
 ];
