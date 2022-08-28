@@ -1,0 +1,10 @@
+.burgerItem {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

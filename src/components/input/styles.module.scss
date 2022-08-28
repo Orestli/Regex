@@ -1,0 +1,58 @@
+.customInput {
+  width: 100%;
+  height: 100%;
+  padding: 0 14px;
+  transition: all .08s linear;
+}
+
+.default {
+  border-radius: 6px;
+}
+
+.text {
+  border: 1px solid #373E47;
+  background-color: transparent;
+  border-radius: 50px;
+
+  &::placeholder {
+    font-weight: 500;
+  }
+
+  &:read-only {
+    background-color: var(--gray);
+  }
+}
+
+.inputCopyContainer {
+  display: flex;
+}
+
+.inputCopy {
+  border: solid #444C56;
+  border-width: 1px 0 1px 1px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  text-align: center;
+}
+
+.copyBlock {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 15px;
+  border: 1px solid #444C56;
+  background-color: #373e47;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #768390;
+    background-color: #444c56;
+  }
+
+  svg {
+    fill: #768390;
+  }
+}

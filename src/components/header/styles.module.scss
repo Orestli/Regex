@@ -1,0 +1,75 @@
+.header {
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--gray);
+  border-bottom: 1px solid #373E47;
+}
+
+.headerContainer {
+  display: grid;
+  grid-template-columns: max-content minmax(100px, 230px) max-content;
+  grid-template-areas: "logo input nav";
+  grid-gap: 20px;
+}
+
+.headerLogo {
+  grid-area: logo;
+}
+
+.headerLogoButton {
+  font-size: 20px;
+}
+
+.headerForm {
+  grid-area: input;
+  min-width: 100px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border: 1px solid #444C56;
+  background: #22272E;
+  border-radius: 6px;
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.headerInput {
+  height: 30px;
+  background-color: transparent;
+  font-weight: 600;
+
+  &::placeholder {
+    color: #adbac7;
+    font-weight: 500;
+  }
+}
+
+.headerNav {
+  grid-area: nav;
+  display: flex;
+  gap: 30px;
+}
+
+.headerBurger {
+  grid-area: burger;
+  display: none;
+}
+
+@media screen and (max-width: 765px) {
+  .headerContainer {
+    grid-template-columns: 20px minmax(100px, 1fr) max-content;
+    grid-template-areas: "burger input logo";
+  }
+
+  .headerBurger {
+    display: block;
+  }
+
+  .headerNav {
+    display: none;
+  }
+}

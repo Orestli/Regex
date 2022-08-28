@@ -1,0 +1,13 @@
+.main {
+  width: 100%;
+  max-width: 1240px;
+  flex: 1 1 auto;
+  margin: 40px auto;
+}
+
+.section {
+  display: grid;
+  padding: 0 50px;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}

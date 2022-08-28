@@ -1,0 +1,51 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  color: #bababa;
+  font-family: Poppins, sans-serif;
+  outline: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background-color: #22272e;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+  padding: 2px;
+  background-color: rgb(255 255 255 / 20%);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255 255 255 / 25%);
+}
+
+/* Tooltip */
+.tippy-tooltip {
+  background-color: #373e47;
+}
+
+.tippy-tooltip .arrow-regular {
+  border-top: 7px solid #373e47 !important;
+}

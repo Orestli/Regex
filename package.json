@@ -6,19 +6,55 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "prettier-format": "prettier --write .",
+    "lint-fix": "eslint --fix .",
+    "stylelint": "stylelint ./src/**/*.{css, scss, sass, less}",
+    "stylelint-fix": "stylelint --fix"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
+    "date-fns": "^2.29.2",
+    "framer-motion": "^7.2.1",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-tippy": "^1.4.0",
+    "sass": "^1.54.5"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "@types/node": "18.7.13",
     "@types/react": "18.0.17",
-    "@types/react-dom": "18.0.6",
-    "eslint": "8.23.0",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "8.17.0",
     "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.11.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^28.0.0",
     "typescript": "4.8.2"
+  },
+  "lint-staged": {
+    "*.{js, jsx, ts, tsx}": [
+      "npm run prettier-format",
+      "npm run lint-fix"
+    ],
+    "*.{css, scss, sass, less}": [
+      "npm run prettier-format",
+      "npm run stylelint-fix"
+    ]
   }
 }
