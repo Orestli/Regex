@@ -61,7 +61,7 @@ If you would like to contribute, please create a **[Pull Request](https://github
     <tr>
       <td>Tags</td>
       <td>String</td>
-      <td>Optional</td>
+      <td>No</td>
       <td>Tags of your regular expression (separate with commas). Used for search</td>
     </tr>
     </tbody>
