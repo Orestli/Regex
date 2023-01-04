@@ -1,0 +1,8 @@
+version: "3"
+services:
+  app:
+    image: regex-app
+    container_name: regex-app
+    restart: always
+    ports:
+      - "3000:3000"
