@@ -1,28 +1,36 @@
-import { useRouter } from "next/router";
-import React, { DetailedHTMLProps, HTMLAttributes } from "react";
+import { useRouter } from 'next/router';
+import type { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-import SlashIcon from "@public/icons/slash.svg";
-import { headerNavList } from "@utils/constants";
+import SlashIcon from '@public/icons/slash.svg';
+import { headerNavList } from '@utils/constants';
 
-import Burger from "../burger";
-import Button from "../button";
-import Input from "../input";
+import Burger from '../burger';
+import Button from '../button';
+import Input from '../input';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
-interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
+interface HeaderProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   searchFiler?: string;
   setSearchFilter?: (value: string) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ searchFiler, setSearchFilter, ...props }) => {
+const Header: React.FC<HeaderProps> = ({
+  searchFiler,
+  setSearchFilter,
+  ...props
+}) => {
   const router = useRouter();
 
   return (
     <header className={styles.header} {...props}>
       <div className={styles.headerContainer}>
         <div className={styles.headerLogo}>
-          <Button className={styles.headerLogoButton} onClick={() => router.replace("/")}>
+          <Button
+            className={styles.headerLogoButton}
+            onClick={() => router.replace('/')}
+          >
             Regex.ua
           </Button>
         </div>
@@ -40,7 +48,9 @@ const Header: React.FC<HeaderProps> = ({ searchFiler, setSearchFilter, ...props 
             <Button
               key={text + i}
               className={styles.headerNavItem}
-              onClick={() => router.replace({ query: { filter: text.toLowerCase() } })}
+              onClick={() =>
+                router.replace({ query: { filter: text.toLowerCase() } })
+              }
               whileHover={{ scale: 1.05 }}
             >
               {text}

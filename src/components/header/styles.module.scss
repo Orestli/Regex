@@ -10,7 +10,7 @@
 .headerContainer {
   display: grid;
   grid-template-columns: max-content minmax(100px, 230px) max-content;
-  grid-template-areas: "logo input nav";
+  grid-template-areas: 'logo input nav';
   grid-gap: 20px;
 }
 
@@ -62,7 +62,7 @@
 @media screen and (max-width: 765px) {
   .headerContainer {
     grid-template-columns: 20px minmax(100px, 1fr) max-content;
-    grid-template-areas: "burger input logo";
+    grid-template-areas: 'burger input logo';
   }
 
   .headerBurger {

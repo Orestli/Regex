@@ -1,7 +1,6 @@
-import { motion, SVGMotionProps } from "framer-motion";
-import React from "react";
+import { type SVGMotionProps, motion } from 'framer-motion';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 const Path: React.FC<SVGMotionProps<SVGPathElement>> = (props) => (
   <motion.path
@@ -18,8 +17,8 @@ const MenuToggle: React.FC<{ toggle: () => void }> = ({ toggle }) => (
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" },
+          closed: { d: 'M 2 2.5 L 20 2.5' },
+          open: { d: 'M 3 16.5 L 17 2.5' },
         }}
       />
       <Path
@@ -32,8 +31,8 @@ const MenuToggle: React.FC<{ toggle: () => void }> = ({ toggle }) => (
       />
       <Path
         variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" },
+          closed: { d: 'M 2 16.346 L 20 16.346' },
+          open: { d: 'M 3 2.5 L 17 16.346' },
         }}
       />
     </svg>
