@@ -1,0 +1,36 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  # Allow manual triggering of this workflow
+  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
+  workflow_dispatch:
+  # Trigger when PR is approved
+  pull_request_review:
+    types:
+      - submitted
+
+jobs:
+  cypress:
+    name: Run Cypress E2E Tests
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.review.state == 'approved'}}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: styfle/cancel-workflow-action@0.9.1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.16
+          cache: yarn
+      - name: Cypress Run
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          headless: true
+          start: yarn build, yarn start
+          command: yarn cy:run
+          wait-on: http://localhost:3000/
+          record: true
