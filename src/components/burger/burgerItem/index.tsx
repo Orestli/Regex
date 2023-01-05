@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import React from "react";
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
-import Button from "../../button";
+import Button from '../../button';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 const variants = {
   open: {

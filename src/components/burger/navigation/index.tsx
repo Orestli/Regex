@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion } from 'framer-motion';
 
-import { headerNavList } from "@utils/constants";
+import { headerNavList } from '@utils/constants';
 
-import BurgerItem from "../burgerItem";
+import BurgerItem from '../burgerItem';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 const variants = {
   open: {
@@ -43,7 +42,11 @@ const Navigation: React.FC<NavigationProps> = ({ handleCloseBurger }) => (
       Sections
     </motion.h3>
     {headerNavList.map(({ text }) => (
-      <BurgerItem key={text} text={text} handleCloseBurger={handleCloseBurger} />
+      <BurgerItem
+        key={text}
+        text={text}
+        handleCloseBurger={handleCloseBurger}
+      />
     ))}
   </motion.ul>
 );

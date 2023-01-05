@@ -1,1 +1,5 @@
 next.config.js
+
+#cypress
+/cypress/plugins
+/cypress/support

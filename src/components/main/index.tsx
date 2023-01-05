@@ -1,15 +1,13 @@
-import React from "react";
+import type { PatternsType } from '../../layout';
+import Card from '../card';
 
-import { PatternsType } from "../../layout";
-import Card from "../card";
+import styles from './styles.module.scss';
 
-import styles from "./styles.module.scss";
-
-interface MainProps {
+interface Props {
   patterns: PatternsType;
 }
 
-const Main: React.FC<MainProps> = ({ patterns }) => {
+const Main: React.FC<Props> = ({ patterns }) => {
   return (
     <main className={styles.main}>
       <section className={styles.section}>

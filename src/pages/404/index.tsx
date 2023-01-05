@@ -1,24 +1,24 @@
-import { motion } from "framer-motion";
-import { NextPage } from "next";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import { motion } from 'framer-motion';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-import Button from "../../components/button";
-import Header from "../../components/header";
+import Button from '../../components/button';
+import Header from '../../components/header';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 const PageNotFound: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
 
     return () => {
-      document.body.style.overflow = "visible";
-      document.documentElement.style.overflow = "visible";
+      document.body.style.overflow = 'visible';
+      document.documentElement.style.overflow = 'visible';
     };
   }, []);
 
@@ -27,17 +27,17 @@ const PageNotFound: NextPage = () => {
       <Head>
         <title>404 | RegEx</title>
       </Head>
-      <Header onClick={() => router.push("/")} />
+      <Header onClick={() => router.push('/')} />
       <div className={styles.wrapper}>
         <motion.div
           className={styles.box}
           animate={{
-            width: ["0px", "500px", "350px", "3000px"],
-            height: ["0px", "500px", "350px", "3000px"],
+            width: ['0px', '500px', '350px', '3000px'],
+            height: ['0px', '500px', '350px', '3000px'],
           }}
           transition={{
             duration: 2,
-            ease: "easeInOut",
+            ease: 'easeInOut',
             times: [0, 0.2, 0.5, 0.8, 1],
             repeat: 0,
             repeatDelay: 1,
@@ -55,7 +55,12 @@ const PageNotFound: NextPage = () => {
         >
           <motion.h1 className={styles.title}>404</motion.h1>
           <motion.p>This page does not exist. We're sorry.</motion.p>
-          <Button className={styles.button} appearance="github" onClick={() => router.push("/")}>
+          <Button
+            className={styles.button}
+            appearance="github"
+            onClick={() => router.push('/')}
+            data-testid="back-home-button"
+          >
             Go to main page
           </Button>
         </motion.div>

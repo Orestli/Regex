@@ -1,23 +1,24 @@
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import React from "react";
+import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
-import { MotionType } from "@typings/index";
+import type { MotionType } from '@typings/index';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
-type ButtonType = "default" | "github";
+type ButtonType = 'default' | 'github';
 
 interface ButtonProps extends MotionType<HTMLButtonElement> {
+  appearance?: ButtonType;
   className?: string;
   children: React.ReactNode;
-  appearance?: ButtonType;
+  'data-testid'?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
   className,
-  appearance = "default",
+  appearance = 'default',
   children,
+  'data-testid': dataTestId,
   ...props
 }) => {
   return (
@@ -25,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       type="button"
       className={clsx(styles.customButton, styles[appearance], className)}
       {...props}
+      data-testid={dataTestId || 'button'}
     >
       {children}
     </motion.button>
